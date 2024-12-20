@@ -18,6 +18,7 @@ class _ShopPageState extends State<ShopPage> {
     showDialog(
         context: context,
         builder: (context) => AlertDialog(
+              backgroundColor: Colors.grey[300],
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8)),
               title: Text(
