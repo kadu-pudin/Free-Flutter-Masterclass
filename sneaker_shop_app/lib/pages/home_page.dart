@@ -4,7 +4,7 @@ import 'package:sneaker_shop_app/pages/cart_page.dart';
 import 'package:sneaker_shop_app/pages/shop_page.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
-  void navigateBottomBar(int index) {
+  void navigateBottomBar(index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -27,85 +27,75 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Padding(
-          padding: EdgeInsets.all(12),
-          child: Builder(
-              builder: (context) => IconButton(
-                    icon: Icon(
-                      Icons.menu,
-                      color: Colors.grey[900],
-                    ),
-                    onPressed: () {
-                      Scaffold.of(context).openDrawer();
-                    },
-                  )),
-        ),
+        leading: Builder(builder: (context) {
+          return IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+          );
+        }),
       ),
       drawer: Drawer(
         backgroundColor: Colors.grey[900],
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              children: [
-                Container(
-                  padding: EdgeInsets.only(top: 40),
-                  child: Image.asset(
-                    'lib/images/logo.png',
-                    color: Colors.white,
-                    height: 150,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 50, bottom: 30),
+                    child: Image.asset(
+                      'lib/images/logo.png',
+                      color: Colors.grey[100],
+                      height: 150,
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25, top: 25),
-                  child: ListTile(
+                  ListTile(
                     leading: Icon(
                       Icons.home,
-                      color: Colors.white,
+                      color: Colors.grey[100],
                     ),
                     title: Text(
-                      'Início',
+                      'Loja',
                       style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
+                          color: Colors.grey[100], fontWeight: FontWeight.bold),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25),
-                  child: ListTile(
+                  ListTile(
                     leading: Icon(
                       Icons.info,
-                      color: Colors.white,
+                      color: Colors.grey[100],
                     ),
                     title: Text(
                       'Sobre',
                       style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
+                          color: Colors.grey[100], fontWeight: FontWeight.bold),
                     ),
                   ),
-                )
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 25, bottom: 25),
-              child: ListTile(
-                leading: Icon(
-                  Icons.logout,
-                  color: Colors.white,
-                ),
-                title: Text(
-                  'Sair',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 40),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.logout,
+                    color: Colors.grey[100],
+                  ),
+                  title: Text(
+                    'Sair',
+                    style: TextStyle(
+                        color: Colors.grey[100], fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
-            )
-          ],
+            ],
+          ),
         ),
       ),
-      bottomNavigationBar: MyBottomNavBar(
-        onTabChange: (index) => navigateBottomBar(index),
-      ),
+      bottomNavigationBar:
+          MyBottomNavBar(onTabChange: (index) => navigateBottomBar(index)),
       body: _pages[_selectedIndex],
     );
   }

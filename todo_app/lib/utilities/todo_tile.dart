@@ -7,7 +7,7 @@ class ToDoTile extends StatelessWidget {
   final bool taskCompleted;
   final Function(bool?)? onChanged;
   final Function(BuildContext)? deleteFunction;
-  ToDoDatabase db = ToDoDatabase();
+  final ToDoDatabase db = ToDoDatabase();
 
   ToDoTile(
       {super.key,
