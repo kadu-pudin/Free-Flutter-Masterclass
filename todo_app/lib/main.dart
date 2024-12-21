@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:todo_app/pages/homepage.dart';
+import 'package:provider/provider.dart';
+import 'package:todo_app/pages/home_page.dart';
+import 'package:todo_app/theme/theme_provider.dart';
 
 void main() async {
   await Hive.initFlutter();
   await Hive.openBox('mybox');
-  runApp(MainApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => ThemeProvider(),
+    child: const MainApp(),
+  ));
 }
-
-// lightColor = Colors.blueGrey | darkColor = Colors.blueGrey[900]
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -18,14 +21,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
-      theme: ThemeData(
-        primaryColor: Colors.blueGrey,
-        textSelectionTheme: const TextSelectionThemeData(
-          cursorColor: Colors.black,
-          selectionHandleColor: Colors.black,
-          selectionColor: Color.fromARGB(100, 0, 0, 0),
-        ),
-      ),
+      theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }

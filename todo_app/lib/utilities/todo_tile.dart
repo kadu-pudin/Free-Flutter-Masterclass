@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/data/database.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:todo_app/data/database.dart';
 
-class ToDoTile extends StatelessWidget {
+class TodoTile extends StatelessWidget {
   final String taskName;
   final bool taskCompleted;
-  final Function(bool?)? onChanged;
-  final Function(BuildContext)? deleteFunction;
-  final ToDoDatabase db = ToDoDatabase();
+  final void Function(bool?)? onChanged;
+  final void Function(BuildContext)? deleteFunction;
 
-  ToDoTile(
+  const TodoTile(
       {super.key,
       required this.taskName,
       required this.taskCompleted,
@@ -19,44 +18,47 @@ class ToDoTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 24, right: 18, left: 18),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(8),
-        child: Slidable(
-          endActionPane: ActionPane(motion: StretchMotion(), children: [
-            SlidableAction(
-              onPressed: deleteFunction,
-              icon: Icons.delete,
-              backgroundColor: Colors.redAccent,
-            )
-          ]),
-          child: Container(
-            padding: EdgeInsets.all(24),
-            decoration: BoxDecoration(color: Colors.blueGrey),
-            child: Row(
-              children: [
-                Checkbox(
-                  value: taskCompleted,
-                  onChanged: onChanged,
-                  activeColor: Colors.blueGrey[900],
-                  checkColor: Colors.blueGrey,
-                ),
-                Text(
-                  taskName,
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: taskCompleted
-                          ? Colors.blueGrey[700]
-                          : Colors.blueGrey[900],
-                      decoration: taskCompleted
-                          ? TextDecoration.lineThrough
-                          : TextDecoration.none),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+        padding: EdgeInsets.only(bottom: 24, right: 18, left: 18),
+        child: ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: Slidable(
+                endActionPane: ActionPane(motion: StretchMotion(), children: [
+                  CustomSlidableAction(
+                    onPressed: deleteFunction,
+                    backgroundColor: Colors.red.shade400,
+                    child: Icon(
+                      Icons.delete,
+                      color: Colors.blueGrey[900],
+                    ),
+                  )
+                ]),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  padding: EdgeInsets.all(20),
+                  child: Row(
+                    children: [
+                      Checkbox(
+                          value: taskCompleted,
+                          onChanged: onChanged,
+                          activeColor: Theme.of(context).colorScheme.secondary,
+                          side: BorderSide(
+                              color: Theme.of(context).colorScheme.secondary,
+                              width: 1.5)),
+                      Text(
+                        taskName,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: taskCompleted
+                                ? Theme.of(context).colorScheme.surfaceBright
+                                : Theme.of(context).colorScheme.secondary,
+                            decoration: taskCompleted
+                                ? TextDecoration.lineThrough
+                                : TextDecoration.none),
+                      ),
+                    ],
+                  ),
+                ))));
   }
 }

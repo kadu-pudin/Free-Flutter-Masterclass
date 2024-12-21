@@ -30,3 +30,5 @@ sneaker_shop_app/.vscode/settings.json
 light_dark_mode/.metadata
 light_dark_mode/pubspec.lock
 light_dark_mode/analysis_options.yaml
+/todo_app/web
+todo_app/analysis_options.yaml

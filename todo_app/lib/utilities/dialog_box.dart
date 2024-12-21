@@ -15,30 +15,40 @@ class DialogBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(8))),
-      content: Container(
+      content: SizedBox(
         height: 150,
-        width: 300,
+        width: 400,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             TextField(
               controller: controller,
-              cursorColor: Colors.black,
+              style: TextStyle(
+                  color: Theme.of(context).colorScheme.secondary,
+                  fontWeight: FontWeight.bold),
+              cursorColor: Theme.of(context).colorScheme.secondary,
               decoration: InputDecoration(
+                fillColor: Theme.of(context).colorScheme.primary,
+                filled: true,
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
-                  borderSide: BorderSide(color: Colors.black),
+                  borderSide: BorderSide.none,
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
-                  borderSide: BorderSide(color: Colors.black),
+                  borderSide: BorderSide.none,
+                ),
+                icon: Icon(
+                  Icons.draw,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
                 hintText: 'Create New Task',
                 hintStyle: TextStyle(
-                    color: Colors.blueGrey[700], fontWeight: FontWeight.bold),
+                    color: Theme.of(context).colorScheme.surfaceBright,
+                    fontWeight: FontWeight.bold),
               ),
             ),
             Row(
