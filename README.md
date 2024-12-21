@@ -4,3 +4,5 @@
     12/13 - 17 of 42 min || 12/14 - 28 of 42 min || 12/15 - 42 of 42 min FINISHED
  - ### 📝 Sneaker Shop app - 29 minutes ⭐⭐⭐
     12/17 - 15 of 29 min || 12/20 - 29 of 29 min FINISHED
+ - ### 📝 Light/Dark Mode app - 8 minutes ⭐⭐⭐⭐
+    12/21 - 8 of 8 min FINISHED
