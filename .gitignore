@@ -21,3 +21,12 @@ todo_app/.flutter-plugins-dependencies
 todo_app/todo_app.iml
 /todo_app/windows
 sneaker_shop_app/.vscode/settings.json
+/light_dark_mode/ios
+/light_dark_mode/macos
+/light_dark_mode/windows
+/light_dark_mode/web
+/light_dark_mode/linux
+/light_dark_mode/android
+light_dark_mode/.metadata
+light_dark_mode/pubspec.lock
+light_dark_mode/analysis_options.yaml
