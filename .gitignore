@@ -41,3 +41,7 @@ state_management_app/pubspec.lock
 /state_management_app/android
 state_management_app/analysis_options.yaml
 state_management_app/.metadata
+/state_management_app/build
+/state_management_app/.idea
+/state_management_app/.dart_tool
+state_management_app/state_management_app.iml
