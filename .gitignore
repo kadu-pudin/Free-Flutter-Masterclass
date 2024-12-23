@@ -32,3 +32,12 @@ light_dark_mode/pubspec.lock
 light_dark_mode/analysis_options.yaml
 /todo_app/web
 todo_app/analysis_options.yaml
+/state_management_app/macos
+/state_management_app/windows
+/state_management_app/web
+/state_management_app/linux
+state_management_app/pubspec.lock
+/state_management_app/ios
+/state_management_app/android
+state_management_app/analysis_options.yaml
+state_management_app/.metadata
