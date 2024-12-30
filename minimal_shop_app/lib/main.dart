@@ -3,7 +3,7 @@ import 'package:minimal_shop_app/models/shop.dart';
 import 'package:minimal_shop_app/pages/cart_page.dart';
 import 'package:minimal_shop_app/pages/home_page.dart';
 import 'package:minimal_shop_app/pages/intro_page.dart';
-import 'package:minimal_shop_app/theme/light_theme.dart';
+import 'package:minimal_shop_app/themes/light_theme.dart';
 import 'package:provider/provider.dart';
 
 void main() {

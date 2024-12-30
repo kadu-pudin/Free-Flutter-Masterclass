@@ -45,3 +45,16 @@ state_management_app/.metadata
 /state_management_app/.idea
 /state_management_app/.dart_tool
 state_management_app/state_management_app.iml
+/minimal_shop_app/.dart_tool
+/.vscode
+/note_apps/android
+/note_apps/ios
+/note_apps/macos
+/note_apps/windows
+/note_apps/web
+/note_apps/linux
+note_apps/pubspec.lock
+note_apps/.metadata
+note_apps/analysis_options.yaml
+note_apps/devtools_options.yaml
+minimal_shop_app/pubspec.lock
