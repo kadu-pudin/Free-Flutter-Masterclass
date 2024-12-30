@@ -1,3 +1,3 @@
-# state_management_app
+# Minimal Shop App
 
 A new Flutter project.
