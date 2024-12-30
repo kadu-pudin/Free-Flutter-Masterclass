@@ -6,5 +6,7 @@
     12/17 - 15 of 29 min || 12/20 - 29 of 29 min FINISHED
  - ### 🔅 Light/Dark Mode app - 8 minutes ⭐⭐⭐⭐
     12/21 - 8 of 8 min FINISHED
- - ### 🛒 Minimal Shop app - 30 minutes ⭐⭐⭐⭐⭐
+ - ### 🛒 Minimal Shop app - 30 minutes ⭐⭐⭐⭐
     12/23 - 30 of 30 min FINISHED
+ - ### 📒 Notes app - 47 minutes ⭐⭐⭐⭐⭐
+    12/30 - 5 of 47 min
