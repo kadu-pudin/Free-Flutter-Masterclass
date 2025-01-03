@@ -53,7 +53,10 @@ class _CreateNotePageState extends State<CreateNotePage> {
                     behavior: SnackBarBehavior.floating,
                     content: Text(
                       "Título vazio.",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.inversePrimary,
+                      ),
                     ),
                     backgroundColor: Colors.black87,
                     elevation: 0.0,

@@ -57,6 +57,7 @@ class _UpdateNotePageState extends State<UpdateNotePage> {
                     borderRadius: BorderRadius.circular(8)),
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: TextField(
+                  cursorColor: Theme.of(context).colorScheme.inversePrimary,
                   style: TextStyle(fontWeight: FontWeight.bold),
                   controller: titleController,
                   decoration: InputDecoration(
@@ -83,6 +84,7 @@ class _UpdateNotePageState extends State<UpdateNotePage> {
                     controller: textController,
                     maxLines: null,
                     expands: true,
+                    cursorColor: Theme.of(context).colorScheme.inversePrimary,
                     style: TextStyle(fontWeight: FontWeight.bold),
                     decoration: InputDecoration(
                         border: InputBorder.none,

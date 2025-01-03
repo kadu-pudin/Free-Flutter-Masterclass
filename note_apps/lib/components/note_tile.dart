@@ -31,7 +31,7 @@ class _NoteTileState extends State<NoteTile> {
             color: Theme.of(context).colorScheme.primary,
             border: Border.all(color: Theme.of(context).colorScheme.secondary),
             borderRadius: BorderRadius.circular(8)),
-        margin: EdgeInsets.only(top: 20, left: 25, right: 25),
+        margin: EdgeInsets.only(bottom: 20, left: 25, right: 25),
         padding: EdgeInsets.all(20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:note_apps/components/mydrawer.dart';
 import 'package:note_apps/components/note_tile.dart';
 import 'package:note_apps/models/note.dart';
 import 'package:note_apps/models/note_database.dart';
 import 'package:note_apps/pages/create_note_page.dart';
+import 'package:note_apps/themes/theme_provider.dart';
+import 'package:note_apps/themes/themes.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -45,20 +49,26 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('NOTES', style: TextStyle(fontWeight: FontWeight.bold)),
+        leadingWidth: 70,
+        toolbarHeight: 80,
+        title: Text('NOTES', style: GoogleFonts.dmSerifText(fontSize: 30)),
         centerTitle: true,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: createNote,
-        elevation: 0.0,
-        shape: RoundedRectangleBorder(
-            side: BorderSide(color: Theme.of(context).colorScheme.secondary),
-            borderRadius: BorderRadius.circular(8)),
-        child: Icon(
-          Icons.add,
-          color: Theme.of(context).colorScheme.inversePrimary,
+      floatingActionButton: Container(
+        margin: EdgeInsets.all(10),
+        child: FloatingActionButton(
+          onPressed: createNote,
+          elevation: 0.0,
+          shape: RoundedRectangleBorder(
+              side: BorderSide(color: Theme.of(context).colorScheme.secondary),
+              borderRadius: BorderRadius.circular(8)),
+          child: Icon(
+            Icons.add,
+            color: Theme.of(context).colorScheme.inversePrimary,
+          ),
         ),
       ),
+      drawer: const MyDrawer(),
       body: ListView.builder(
           itemCount: currentNotes.length,
           itemBuilder: (context, index) {
