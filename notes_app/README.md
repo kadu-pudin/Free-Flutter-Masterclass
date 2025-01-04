@@ -16,6 +16,6 @@
     <td><img src = "https://github.com/kadu-pudin/Free-Flutter-Masterclass/blob/main/apps_screenshots/Notes%20App/settings_page.png" width= "200" alt = "Switch to change theme mode"></td>
     <td><img src = "https://github.com/kadu-pudin/Free-Flutter-Masterclass/blob/main/apps_screenshots/Notes%20App/create_note.jpeg" width= "200" alt = "Create a note with title and text"></td>
     <td><img src = "https://github.com/kadu-pudin/Free-Flutter-Masterclass/blob/main/apps_screenshots/Notes%20App/update_note.jpeg" width= "200" alt = "Update a note changing its title and text"></td>
-    <td><img src = "https://github.com/kadu-pudin/Free-Flutter-Masterclass/blob/main/apps_screenshots/Notes%20App/light_mode.png" width= "200" alt = "Light mode variant"></td>
+    <td><img src = "https://github.com/kadu-pudin/Free-Flutter-Masterclass/blob/main/apps_screenshots/Notes%20App/light_mode.png" width= "220" alt = "Light mode variant"></td>
   </tr>
 </table>
