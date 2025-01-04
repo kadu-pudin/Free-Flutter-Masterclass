@@ -58,3 +58,12 @@ note_apps/.metadata
 note_apps/analysis_options.yaml
 note_apps/devtools_options.yaml
 minimal_shop_app/pubspec.lock
+habit_tracker_app/.metadata
+habit_tracker_app/analysis_options.yaml
+/habit_tracker_app/android
+/habit_tracker_app/ios
+/habit_tracker_app/macos
+/habit_tracker_app/linux
+/habit_tracker_app/windows
+/habit_tracker_app/web
+habit_tracker_app/pubspec.lock
