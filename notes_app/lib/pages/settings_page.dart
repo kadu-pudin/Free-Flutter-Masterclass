@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:note_apps/themes/theme_provider.dart';
+import 'package:notes_app/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -22,14 +21,15 @@ class _SettingsPageState extends State<SettingsPage> {
     return Scaffold(
       appBar: AppBar(
         leadingWidth: 70,
-        toolbarHeight: 100,
+        toolbarHeight: 80,
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
             icon: Icon(
               Icons.chevron_left,
               size: 48,
             )),
-        title: Text('Settings', style: GoogleFonts.dmSerifText(fontSize: 30)),
+        title: Text('SETTINGS',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
         centerTitle: true,
       ),
       body: Container(
@@ -40,7 +40,7 @@ class _SettingsPageState extends State<SettingsPage> {
             ),
             borderRadius: BorderRadius.circular(8)),
         margin: EdgeInsets.symmetric(horizontal: 25),
-        padding: EdgeInsets.all(25),
+        padding: EdgeInsets.all(20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

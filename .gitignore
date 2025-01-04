@@ -67,3 +67,12 @@ habit_tracker_app/analysis_options.yaml
 /habit_tracker_app/windows
 /habit_tracker_app/web
 habit_tracker_app/pubspec.lock
+/note_apps
+/notes_app/ios
+/notes_app/linux
+/notes_app/macos
+/notes_app/windows
+/note_apps
+/notes_app/android
+/notes_app/web
+notes_app/pubspec.lock

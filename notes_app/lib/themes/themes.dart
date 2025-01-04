@@ -6,7 +6,7 @@ ThemeData lightMode = ThemeData(
         surface: Colors.grey.shade300,
         primary: Colors.grey.shade200,
         secondary: Colors.white,
-        inversePrimary: Colors.grey.shade800),
+        inversePrimary: Colors.grey.shade700),
     textSelectionTheme: const TextSelectionThemeData(
       cursorColor: Colors.black,
       selectionColor: Colors.black54,
@@ -19,7 +19,7 @@ ThemeData darkMode = ThemeData(
         surface: Colors.grey.shade900,
         primary: Colors.grey.shade800,
         secondary: Colors.grey.shade700,
-        inversePrimary: Colors.grey.shade300),
+        inversePrimary: Colors.grey.shade400),
     textSelectionTheme: const TextSelectionThemeData(
       cursorColor: Colors.white,
       selectionColor: Color.fromARGB(137, 14, 9, 9),

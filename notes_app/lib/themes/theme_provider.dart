@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_apps/themes/themes.dart';
+import 'package:notes_app/themes/themes.dart';
 
 class ThemeProvider with ChangeNotifier {
   final brightness = WidgetsBinding.instance.platformDispatcher.platformBrightness;

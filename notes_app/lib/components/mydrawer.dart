@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:note_apps/pages/settings_page.dart';
+import 'package:notes_app/pages/settings_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -21,33 +20,40 @@ class MyDrawer extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.notes,
-                    color: Theme.of(context).colorScheme.inversePrimary,
-                    size: 32,
+                    size: 48,
                   ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text('Notes App',
-                      style: GoogleFonts.dmSerifText(
-                          fontWeight: FontWeight.bold, fontSize: 32)),
                 ],
               ),
             ),
             // notes
             ListTile(
-              leading: Icon(Icons.home),
-              title:
-                  Text('Notes', style: TextStyle(fontWeight: FontWeight.bold)),
+              leading: Icon(
+                Icons.home,
+                color: Theme.of(context).colorScheme.inversePrimary,
+              ),
+              title: Text('Notes',
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                      fontWeight: FontWeight.bold)),
               onTap: () => Navigator.pop(context),
             ),
             // settings
             ListTile(
-              leading: Icon(Icons.settings),
+              leading: Icon(
+                Icons.settings,
+                color: Theme.of(context).colorScheme.inversePrimary,
+              ),
               title: Text('Settings',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                      fontWeight: FontWeight.bold)),
               onTap: () {
                 Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsPage(),));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SettingsPage(),
+                    ));
               },
             )
           ],

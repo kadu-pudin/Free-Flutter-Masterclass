@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:note_apps/models/note_database.dart';
-import 'package:note_apps/pages/home_page.dart';
-import 'package:note_apps/themes/theme_provider.dart';
+import 'package:notes_app/models/note_database.dart';
+import 'package:notes_app/pages/home_page.dart';
+import 'package:notes_app/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() async {

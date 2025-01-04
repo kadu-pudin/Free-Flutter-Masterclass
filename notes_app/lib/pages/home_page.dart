@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:note_apps/components/mydrawer.dart';
-import 'package:note_apps/components/note_tile.dart';
-import 'package:note_apps/models/note.dart';
-import 'package:note_apps/models/note_database.dart';
-import 'package:note_apps/pages/create_note_page.dart';
-import 'package:note_apps/themes/theme_provider.dart';
-import 'package:note_apps/themes/themes.dart';
+import 'package:notes_app/components/mydrawer.dart';
+import 'package:notes_app/components/note_tile.dart';
+import 'package:notes_app/models/note.dart';
+import 'package:notes_app/models/note_database.dart';
+import 'package:notes_app/pages/create_note_page.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -51,7 +48,8 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         leadingWidth: 70,
         toolbarHeight: 80,
-        title: Text('NOTES', style: GoogleFonts.dmSerifText(fontSize: 30)),
+        title: Text('NOTES',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
         centerTitle: true,
       ),
       floatingActionButton: Container(
@@ -69,12 +67,34 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       drawer: const MyDrawer(),
-      body: ListView.builder(
-          itemCount: currentNotes.length,
-          itemBuilder: (context, index) {
-            final note = currentNotes[index];
-            return NoteTile(note: note);
-          }),
+      body: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.draw,
+                size: 18,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
+              Text('Tap to edit note',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Theme.of(context).colorScheme.secondary,
+                  )),
+            ],
+          ),
+          SizedBox(height: 20),
+          Expanded(
+            child: ListView.builder(
+                itemCount: currentNotes.length,
+                itemBuilder: (context, index) {
+                  final note = currentNotes[index];
+                  return NoteTile(note: note);
+                }),
+          ),
+        ],
+      ),
     );
   }
 }

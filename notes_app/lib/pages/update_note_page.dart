@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:note_apps/models/note.dart';
-import 'package:note_apps/models/note_database.dart';
+import 'package:notes_app/models/note.dart';
+import 'package:notes_app/models/note_database.dart';
 import 'package:provider/provider.dart';
 
 class UpdateNotePage extends StatefulWidget {

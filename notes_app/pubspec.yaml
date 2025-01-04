@@ -1,4 +1,4 @@
-name: note_apps
+name: notes_app
 description: "A new Flutter project."
 publish_to: 'none'
 version: 0.1.0
@@ -9,10 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_launcher_icons: ^0.14.2
-  google_fonts: ^6.2.1
   isar: ^3.1.0+1
-  isar_flutter_libs: '^3.1.0+1'
+  isar_flutter_libs: ^3.1.0+1
   path_provider: ^2.1.5
   provider: ^6.1.2
 
@@ -22,11 +20,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   isar_generator: ^3.1.0+1
-  retrofit_generator: any
-
-flutter_launcher_icons:
-  android: true
-  image_path: 'lib\assets\logo.png'
 
 flutter:
   uses-material-design: true
