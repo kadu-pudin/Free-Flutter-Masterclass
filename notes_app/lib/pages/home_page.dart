@@ -75,12 +75,12 @@ class _HomePageState extends State<HomePage> {
               Icon(
                 Icons.draw,
                 size: 18,
-                color: Theme.of(context).colorScheme.secondary,
+                color: Theme.of(context).colorScheme.inversePrimary,
               ),
               Text('Tap to edit note',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Theme.of(context).colorScheme.secondary,
+                    color: Theme.of(context).colorScheme.inversePrimary,
                   )),
             ],
           ),
