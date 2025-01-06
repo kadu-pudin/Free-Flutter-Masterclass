@@ -39,7 +39,6 @@ class HabitDatabase extends ChangeNotifier {
   // criar hábito
   Future<void> addHabit(String habitName) async {
     final newHabit = Habit()..name = habitName;
-
     await isar.writeTxn(
       () => isar.habits.put(newHabit),
     );
@@ -55,7 +54,7 @@ class HabitDatabase extends ChangeNotifier {
   }
 
   // atualizar hábito on / off
-  // ? díficil de entender..
+  // ? díficil de compreender..
   Future<void> updateHabitCompletion(int id, bool isCompleted) async {
     final habit = await isar.habits.get(id);
     if (habit != null) {
@@ -72,6 +71,7 @@ class HabitDatabase extends ChangeNotifier {
         await isar.habits.put(habit);
       });
     }
+    readHabits();
   }
 
   // editar informações do hábito
@@ -88,7 +88,7 @@ class HabitDatabase extends ChangeNotifier {
 
   // deletar o hábito
   Future<void> deleteHabit(int id) async {
-    isar.writeTxn(() async {
+    await isar.writeTxn(() async {
       await isar.habits.delete(id);
     });
     readHabits();
