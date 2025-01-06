@@ -10,5 +10,5 @@
     12/23 - 30 of 30 min FINISHED
  - ### 📒 Notes app - 47 minutes ⭐⭐⭐⭐
     12/30 - 5 of 47 min || 12/31 - 32 of 47 min || 01/03 - 47 of 47 min FINISHED
- - ### 🛒 Habit Tracker app - 38 minutes ⭐⭐⭐
-    01/04 - 17 of 38 min
+ - ### 🍏 Habit Tracker app - 38 minutes ⭐⭐⭐
+    01/04 - 17 of 38 min || 01/05 - 38 of 38 min FINISHED
