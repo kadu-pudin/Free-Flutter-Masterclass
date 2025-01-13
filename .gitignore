@@ -90,3 +90,4 @@ authentication/.metadata
 authentication/analysis_options.yaml
 authentication/firebase.json
 authentication/lib/firebase_options.dart
+authentication/.vscode/settings.json

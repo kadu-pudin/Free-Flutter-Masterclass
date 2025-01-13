@@ -5,20 +5,22 @@ import 'package:authentication/services/auth_services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  final Function()? onTap;
-  const LoginPage({super.key, required this.onTap});
+class RegisterPage extends StatefulWidget {
+  final Function() onTap;
+  const RegisterPage({super.key, required this.onTap});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _LoginPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginPageState extends State<RegisterPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-  bool errorSigningIn = false;
+  final confirmPasswordController = TextEditingController();
+  bool errorWithPasswords = false;
+  String errorText = '';
 
-  void signUserIn() async {
+  void signUserUp() async {
     showDialog(
       context: context,
       builder: (context) {
@@ -29,17 +31,37 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: emailController.text,
-        password: passwordController.text,
-      );
+      if (passwordController.text == confirmPasswordController.text) {
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: emailController.text,
+          password: passwordController.text,
+        );
+      } else {
+        setState(() {
+          errorText = 'Passwords don\'t match!';
+          errorWithPasswords = true;
+        });
+      }
       Navigator.pop(context);
-    } on FirebaseAuthException {
+    } on FirebaseAuthException catch (e) {
       Navigator.pop(context);
 
-      setState(() {
-        errorSigningIn = true;
-      });
+      if (e.code == 'email-already-in-use') {
+        setState(() {
+          errorText = 'Email already in use!';
+          errorWithPasswords = true;
+        });
+      } else if (e.code == 'weak-password') {
+        setState(() {
+          errorText = 'Weak password!';
+          errorWithPasswords = true;
+        });
+      } else {
+        setState(() {
+          errorText = 'Invalid email or password!';
+          errorWithPasswords = true;
+        });
+      }
     }
   }
 
@@ -54,15 +76,15 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 // logo
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 60),
+                  padding: const EdgeInsets.symmetric(vertical: 45),
                   child: Icon(
                     Icons.shopping_bag,
-                    size: 100,
+                    size: 50,
                   ),
                 ),
                 // welcome back!
                 Text(
-                  'Welcome back, You\'ve been missed!',
+                  'Let\'s create an account for you!',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Theme.of(context).colorScheme.secondary),
@@ -90,7 +112,16 @@ class _LoginPageState extends State<LoginPage> {
                   controller: passwordController,
                 ),
 
-                // esqueceu a senha?
+                SizedBox(
+                  height: 15,
+                ),
+
+                MyTextfield(
+                  hintText: 'Confirm Password',
+                  obscureText: true,
+                  controller: confirmPasswordController,
+                ),
+
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
@@ -98,14 +129,14 @@ class _LoginPageState extends State<LoginPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Visibility(
-                        visible: errorSigningIn,
+                        visible: errorWithPasswords,
                         child: Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(100),
                               color: const Color.fromARGB(30, 244, 67, 54)),
                           padding:
                               EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                          child: Text('Wrong email or password',
+                          child: Text(errorText,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 12,
@@ -113,23 +144,18 @@ class _LoginPageState extends State<LoginPage> {
                                       const Color.fromARGB(150, 244, 67, 54))),
                         ),
                       ),
-                      Text(
-                        'Forgot password?',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Theme.of(context).colorScheme.secondary),
-                      ),
                     ],
                   ),
                 ),
 
                 SizedBox(
-                  height: 5,
+                  height: 20,
                 ),
+
                 // botão de login
                 MyButton(
-                  text: 'Sign In',
-                  onTap: signUserIn,
+                  text: 'Register Now',
+                  onTap: signUserUp,
                 ),
                 // mais opções de login
 
@@ -195,7 +221,7 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Not a member?',
+                    Text('Already have an account?',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Theme.of(context).colorScheme.secondary)),
@@ -204,7 +230,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     GestureDetector(
                       onTap: widget.onTap,
-                      child: Text('Register Now',
+                      child: Text('Login now',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.lightBlue,
