@@ -79,3 +79,14 @@ habit_tracker_app/pubspec.lock
 /notes_app/android
 /notes_app/web
 notes_app/pubspec.lock
+/authentication/android
+/authentication/ios
+/authentication/linux
+/authentication/macos
+/authentication/windows
+/authentication/web
+authentication/pubspec.lock
+authentication/.metadata
+authentication/analysis_options.yaml
+authentication/firebase.json
+authentication/lib/firebase_options.dart
