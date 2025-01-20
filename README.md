@@ -14,3 +14,7 @@
     01/04 - 17 of 38 min || 01/05 - 38 of 38 min FINISHED
  - ### 🤖 Authentification app - 48 minutes ⭐⭐⭐⭐
     01/12 - 32 of 48 min || 01/13 - 48 of 48 min FINISHED
+ - ### 📒 Notes app with Firebase Database - 13 minutes ⭐⭐⭐⭐
+    01/15 - 13 of 13 min FINISHED
+ - ### 💬 Chat app - 1 hour and 5 minutes ⭐⭐⭐
+    01/16 - 15m of 1h 05m | 01/17 - 50m of 1h 05m | 01/20 - 1h 05m of 1h 05m FINISHED
