@@ -12,5 +12,5 @@
     12/30 - 5 of 47 min || 12/31 - 32 of 47 min || 01/03 - 47 of 47 min FINISHED
  - ### 🍏 Habit Tracker app - 38 minutes ⭐⭐⭐
     01/04 - 17 of 38 min || 01/05 - 38 of 38 min FINISHED
- - ### 🤖 Authentification app - 48 minutes ⭐⭐⭐⭐⭐
-    01/12 - 32 min
+ - ### 🤖 Authentification app - 48 minutes ⭐⭐⭐⭐
+    01/12 - 32 of 48 min || 01/13 - 48 of 48 min FINISHED
