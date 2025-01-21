@@ -1,4 +1,5 @@
-# 📒 Chat app with Firestore Database and Authentication - 13 minutes ⭐⭐⭐⭐
+# 📒 Chat app - 13 minutes ⭐⭐⭐⭐
+Chat app with Firestore Database and Authentication
 
 <h2>Screenshots</h2>
 <table width = "100%" style = "table-layout: fixed;">
