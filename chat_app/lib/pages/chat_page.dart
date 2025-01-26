@@ -8,7 +8,8 @@ import 'package:flutter/material.dart';
 class ChatPage extends StatefulWidget {
   final String receiverEmail;
   final String receiverID;
-  ChatPage({super.key, required this.receiverEmail, required this.receiverID});
+  const ChatPage(
+      {super.key, required this.receiverEmail, required this.receiverID});
 
   @override
   State<ChatPage> createState() => _ChatPageState();
@@ -75,8 +76,9 @@ class _ChatPageState extends State<ChatPage> {
           children: [
             Expanded(child: buildMessageList()),
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(5),
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 spacing: 10,
                 children: [
                   Expanded(
@@ -90,6 +92,7 @@ class _ChatPageState extends State<ChatPage> {
                       color: Colors.green,
                       borderRadius: BorderRadius.circular(8),
                     ),
+                    margin: EdgeInsets.only(top: 5),
                     child: IconButton(
                       onPressed: sendMessage,
                       icon: Icon(Icons.arrow_upward),

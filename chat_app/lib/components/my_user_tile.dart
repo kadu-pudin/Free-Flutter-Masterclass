@@ -17,7 +17,7 @@ class MyUserTile extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
             color: Theme.of(context).colorScheme.secondary),
-        margin: EdgeInsets.only(top: 10, right: 20, left: 20),
+        margin: EdgeInsets.only(top: 15, right: 20, left: 20),
         padding: EdgeInsets.all(25),
         child: Row(
           spacing: 10,

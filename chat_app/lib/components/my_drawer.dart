@@ -19,7 +19,6 @@ class MyDrawer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             // logo
-
             Column(
               children: [
                 Text(

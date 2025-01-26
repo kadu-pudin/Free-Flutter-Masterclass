@@ -5,12 +5,12 @@ class MyTextField extends StatelessWidget {
   final FocusNode? focusNode;
   final String? type;
   final TextEditingController controller;
-  const MyTextField({
+  const MyTextField ({
     super.key,
-    required this.hintText,
     required this.controller,
-    this.type,
+    required this.hintText,
     this.focusNode,
+    this.type,
   });
 
   int maxTextLength() {
@@ -46,7 +46,7 @@ class MyTextField extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
               borderSide: BorderSide(
-                color: Theme.of(context).colorScheme.tertiary,
+                color: Theme.of(context).colorScheme.secondary,
                 width: 2,
               )),
           focusedBorder: OutlineInputBorder(

@@ -115,3 +115,15 @@ online_database/analysis_options.yaml
 /chat_app/.vscode
 chat_app/lib/firebase_options.dart
 chat_app/firebase.json
+social_media_app/.metadata
+/social_media_app/android
+/social_media_app/ios
+/social_media_app/linux
+/social_media_app/macos
+/social_media_app/windows
+/social_media_app/web
+social_media_app/pubspec.lock
+social_media_app/lib/firebase_options.dart
+social_media_app/firebase.json
+social_media_app/analysis_options.yaml
+/social_media_app/.vscode
