@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:social_media_app/components/my_list_tile.dart';
 
 class UsersPage extends StatelessWidget {
   const UsersPage({super.key});
@@ -63,23 +64,9 @@ class UsersPage extends StatelessWidget {
                     itemBuilder: (context, index) {
                       final user = users[index];
 
-                      return Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Theme.of(context).colorScheme.secondary),
-                        padding: EdgeInsets.all(5),
-                        margin: EdgeInsets.only(top: 10),
-                        child: ListTile(
-                          leading: Icon(Icons.person),
-                          title: Text(user['username'],
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20)),
-                          subtitle: Text(user['email'],
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color:
-                                      Theme.of(context).colorScheme.primary)),
-                        ),
+                      return MyListTile(
+                        title: user['username'],
+                        subtitle: user['email'],
                       );
                     },
                   );

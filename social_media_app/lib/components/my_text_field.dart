@@ -15,8 +15,10 @@ class MyTextField extends StatelessWidget {
       return 16;
     } else if (type == 'username') {
       return 15;
-    } else {
+    } else if (type == 'email') {
       return 30;
+    } else {
+      return 100;
     }
   }
 
@@ -25,8 +27,10 @@ class MyTextField extends StatelessWidget {
       return Icon(Icons.lock);
     } else if (type == 'username') {
       return Icon(Icons.person);
-    } else {
+    } else if (type == 'email') {
       return Icon(Icons.email);
+    } else {
+      return Icon(Icons.post_add);
     }
   }
 
