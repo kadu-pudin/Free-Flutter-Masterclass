@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:social_media_app/components/my_drawer.dart';
 import 'package:social_media_app/components/my_list_tile.dart';
@@ -81,7 +80,6 @@ class HomePage extends StatelessWidget {
 
                   String message = post['PostMessage'];
                   String userEmail = post['UserEmail'];
-                  Timestamp timeStamp = post['TimeStamp'];
 
                   return MyListTile(
                     title: message,
