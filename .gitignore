@@ -127,3 +127,12 @@ social_media_app/lib/firebase_options.dart
 social_media_app/firebase.json
 social_media_app/analysis_options.yaml
 /social_media_app/.vscode
+/responsive_design/android
+/responsive_design/ios
+/responsive_design/macos
+/responsive_design/windows
+/responsive_design/web
+/responsive_design/linux
+responsive_design/pubspec.lock
+responsive_design/analysis_options.yaml
+responsive_design/.metadata
