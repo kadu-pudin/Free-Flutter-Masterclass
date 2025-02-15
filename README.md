@@ -1,7 +1,13 @@
 ## 📱 Flutter Apps
 (based on 🎓 FULL Flutter Masterclass by Mitch Koko)
-- START: 12/13/2024 --> END: 02/14/2025 
-- Total: 79h 40m of programming in Flutter
+
+<p>This repository contains the apps I built following Mitch Koko's video. Through this process, I learned the basic structure of Flutter along with its state management libraries, enabling me to create different environments with authentication, online and offline databases, and explore Flutter's overall capabilities.</p>
+<p>The missing apps are either outdated projects that no longer work as intended (e.g., APIs) or ones I couldn't figure out (e.g., Notifications).</p>
+
+<h3>START: 12/13/2024</h3>
+<h3>END: 02/14/2025</h3>
+<h3>TOTAL: 79h 40m of programming in Flutter </h3>
+  
 <hr>
 
 - ### 📝 TODO app - 42 minutes ⭐⭐⭐⭐⭐
