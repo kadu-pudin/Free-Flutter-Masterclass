@@ -23,5 +23,5 @@
 - ### 💬 Chat app - 1 hour and 5 minutes ⭐⭐⭐
     01/16 - 15m of 1h 05m | 01/17 - 50m of 1h 05m | 01/20 - 1h 05m of 1h 05m FINISHED
 - ### 👥 Social Media app - 50 minutes ⭐⭐⭐⭐ FINISHED
-- ### 👥 Responsive Design app - 29 minutes ⭐⭐⭐⭐ FINISHED
-- ### 👥 Music Player app - 38 minutes ⭐⭐ FINISHED
+- ### 💻 Responsive Design app - 29 minutes ⭐⭐⭐⭐ FINISHED
+- ### 🎵 Music Player app - 38 minutes ⭐⭐ FINISHED
